@@ -26,13 +26,16 @@ body {
     align-items: center;
     text-align: center;
     max-width: 800px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Opcional: fundo semitransparente */
+    border-radius: 10px; /* Opcional: bordas arredondadas */
 }
 
 .profile-image {
-    width: 550px;
-    height: 550px;
-    /* border-radius: 10%; */
-    object-fit: fill;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
 }
 
 .text-content h1 {
@@ -43,24 +46,28 @@ body {
 
 .text-content h2 {
     color: #2a71d0;
-    font-size: 36px;
+    font-size: 32px;
     margin: 20px 0;
 }
 
 .description {
-    font-size: 18px;
+    font-size: 25px;
     margin: 20px 0;
 }
 
 .call-to-action {
-    font-size: 20px;
+    font-size: 25px;
     color: #2a71d0;
     margin-bottom: 20px;
 }
 
+.contact-info {
+    margin-bottom: 30px;
+}
+
 .contact-info a {
     font-size: 20px;
-    color: #2a71d0;
+    color: #ffff;
     text-decoration: none;
 }
 
@@ -72,4 +79,63 @@ body {
 .social-icons img {
     width: 40px;
     height: 40px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1200px) {
+    .profile-image {
+        width: 80%;
+        max-width: 450px;
+    }
+
+    .text-content h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        width: 70%;
+        max-width: 350px;
+    }
+
+    .text-content h1 {
+        font-size: 22px;
+    }
+
+    .text-content h2 {
+        font-size: 24px;
+    }
+
+    .description, .call-to-action {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .text-content h1 {
+        font-size: 18px;
+    }
+
+    .text-content h2 {
+        font-size: 22px;
+    }
+
+    .description, .call-to-action {
+        font-size: 14px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
 }
